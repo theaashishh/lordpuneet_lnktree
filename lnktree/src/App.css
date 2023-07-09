@@ -9,7 +9,7 @@
 
 .bgImg {
     position: fixed;
-    filter: blur(20px) brightness(0.9);
+    filter: blur(40px) brightness(0.9);
     width: 100vw;
     z-index: -100;
 }
@@ -41,13 +41,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 25px;
 }
 
-.lnk-box h1{
+.main_lnk_container a {
+    text-decoration: none;
+    color: white;
+}
+
+.lnk-box h1 {
     font-weight: 900;
-    font-size: 1.7rem;
-    text-shadow:  0px 0px 4px rgba(0, 0, 0, 0.379);
+    font-size: 1.4rem;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.379);
 }
 
 .lnk-box {
@@ -56,55 +61,73 @@
     justify-content: space-between;
     width: 600px;
     height: 50px;
+    cursor: pointer;
     border-radius: 18px;
     background-color: rgba(196, 176, 176, 0.404);
     padding: 6px 25px;
-    border: 1px solid rgb(216, 216, 216);
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 100ms linear;
 }
 
 .icon-box img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     margin-top: 6px;
+}
+
+.lnk-box:hover {
+    scale: 0.94;
+    transform: translate(10px, 10px);
+    background-color: rgba(0, 0, 0, 0.195);
+}
+
+.icon-box:enabled {
+    scale: 0.94;
+    transform: translate(10px, 10px);
 }
 
 
 /* for phone */
 
 @media only screen and (max-width: 456px) {
-    .bgImg{
+    body {
+        overflow-x: hidden;
+    }
+
+    .bgImg {
         height: 100vh;
     }
 
-    .lnk-box{
+    .lnk-box {
         width: 320px;
-        height:40px;
+        height: 40px;
         border-radius: 13px;
     }
-    
-    .lnk-box h1{
-        font-size: 1.2rem;
+
+    .lnk-box h1 {
+        font-size: 1.05rem;
+        color: white;
     }
 
-    .icon-box img{
+    .icon-box img {
         width: 40px;
-        height: 45px;
+        height: 40px;
+    }
+
+    .icon-box:hover {
+        scale: 1.05;
     }
 }
 
 @media only screen and (max-width: 806px) {
-    .bgImg{
+    .bgImg {
         height: 100vh;
     }
 
-    .lnk-box{
+    .lnk-box {
         border-radius: 15px;
     }
-    
+
 
 }
-
-
-
-
